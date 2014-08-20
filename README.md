@@ -54,6 +54,13 @@ $ pip install -r requirements.txt
 $ nohup python main.py &> /path/to/log/deployer.out
 ```
 
+## Running Tests
+You need to make a copy of the `src/tests/test_config_example.py` and add correct values for the variables.
+
+```
+$ make test
+```
+
 This code is very much an __alpha__ version. Please test and integrate properly before you integrate this into your production systems. 
 
 If anyone would like to help out with this project, please feel free to fork it!
