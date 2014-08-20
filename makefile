@@ -1,2 +1,2 @@
 test:
-	cd src && nosetests -v
+	cd deployer && nosetests -v

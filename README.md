@@ -50,8 +50,8 @@ source /home/env/myapp/bin/activate && cd /home/apps/myapp/ && fab production >>
 ```bash
 $ virtualenv deployer # or use virtualenvwrapper
 $ source deployer/bin/activate
-$ pip install -r requirements.txt
-$ nohup python main.py &> /path/to/log/deployer.out
+$ pip install .
+$ nohup deployer &> /path/to/log/deployer.out
 ```
 
 ## Running Tests
