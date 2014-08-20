@@ -1,5 +1,7 @@
 boto==2.32.1
 https://github.com/ekulyk/PythonPusherClient/archive/master.zip
+mox==0.5.3
+nose==1.3.3
 pika==0.9.14
 pusher==0.8
 six==1.7.3

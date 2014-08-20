@@ -2,13 +2,11 @@ import unittest, re, httplib, time, cgi
 from nose.tools import *
 import mox
 
-import sys
-sys.path.append("../")
-
 import socket
 import pusher
 
-class PropertiesTest(unittest.TestCase):
+
+class TestProperties(unittest.TestCase):
     def setUp(self):
         pusher.app_id = '123'
         pusher.key = 'test-global-key'
@@ -23,7 +21,7 @@ class PropertiesTest(unittest.TestCase):
     #
     # Using globals
     #
-    
+
     def test_global_app_id(self, *args):
         eq_(pusher.Pusher().app_id, '123')
 
