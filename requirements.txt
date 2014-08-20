@@ -1,0 +1,6 @@
+boto==2.32.1
+https://github.com/ekulyk/PythonPusherClient/archive/master.zip
+pika==0.9.14
+pusher==0.8
+six==1.7.3
+websocket-client==0.16.0
