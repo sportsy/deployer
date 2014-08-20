@@ -48,7 +48,17 @@ source /home/env/myapp/bin/activate && cd /home/apps/myapp/ && fab production >>
 
 ## How to Run
 ```bash
-nohup python main.py &> /path/to/log/deployer.out
+$ virtualenv deployer # or use virtualenvwrapper
+$ source deployer/bin/activate
+$ pip install .
+$ nohup deployer &> /path/to/log/deployer.out
+```
+
+## Running Tests
+You need to make a copy of the `src/tests/test_config_example.py` and add correct values for the variables.
+
+```
+$ make test
 ```
 
 This code is very much an __alpha__ version. Please test and integrate properly before you integrate this into your production systems. 
