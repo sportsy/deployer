@@ -48,7 +48,10 @@ source /home/env/myapp/bin/activate && cd /home/apps/myapp/ && fab production >>
 
 ## How to Run
 ```bash
-nohup python main.py &> /path/to/log/deployer.out
+$ virtualenv deployer # or use virtualenvwrapper
+$ source deployer/bin/activate
+$ pip install -r requirements.txt
+$ nohup python main.py &> /path/to/log/deployer.out
 ```
 
 This code is very much an __alpha__ version. Please test and integrate properly before you integrate this into your production systems. 
