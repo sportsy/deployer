@@ -55,7 +55,7 @@ This code is very much an __alpha__ version. Please test and integrate properly 
 
 If anyone would like to help out with this project, please feel free to fork it!
 
-### Python Libraries Used:
+### Python Libraries Used
 
  * [boto](https://github.com/boto/boto) for Amazon SQS
  * [pika](https://github.com/pika/pika) for MQ connection
