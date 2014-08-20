@@ -46,6 +46,10 @@ The command key is the important part. You can run any script or bash command. F
 source /home/env/myapp/bin/activate && cd /home/apps/myapp/ && fab production >> /var/log/fabric/cron.log 2>&1
 ```
 
+## How to Run
+```bash
+nohup python main.py &> /path/to/log/deployer.out
+```
 
 This code is very much an __alpha__ version. Please test and integrate properly before you integrate this into your production systems. 
 
