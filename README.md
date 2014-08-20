@@ -3,7 +3,7 @@
 Auto-Scaling Continuous Deployment Helper
 
 
- * Easy notify machines that builds are ready to be deployed
+ * Easily notify machines that builds are ready to be deployed
  * Configuration for multiple methods to notify your machines
  * Works across auto scaling methodologies
 
