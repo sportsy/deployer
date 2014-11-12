@@ -43,7 +43,7 @@ setup(
     include_package_data=True,
     test_suite='nose.collector',
     install_requires=install_requires,
-    dependency_links=['https://github.com/ekulyk/PythonPusherClient.git#egg=pusherclient==0.2.0'],
+    dependency_links=['https://github.com/ekulyk/PythonPusherClient/tarball/master#egg=pusherclient==0.2.0'],
     tests_require=tests_require,
     entry_points="""
     [console_scripts]
