@@ -43,6 +43,7 @@ setup(
     include_package_data=True,
     test_suite='nose.collector',
     install_requires=install_requires,
+    dependency_links=[],
     tests_require=tests_require,
     entry_points="""
     [console_scripts]
