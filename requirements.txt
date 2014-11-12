@@ -2,5 +2,6 @@ boto==2.32.1
 pika==0.9.14
 pusher==0.8
 pusherclient==0.2.0
+#git+git://github.com/ekulyk/PythonPusherClient.git
 six==1.7.3
 websocket-client==0.16.0
