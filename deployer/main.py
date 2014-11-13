@@ -34,7 +34,7 @@ class MQServer(threading.Thread):
         # start the connection to the MQ server
         connection = pika.BlockingConnection(pika.ConnectionParameters(host=endpoint))
         channel = connection.channel()
-        channel.basic_consume(self.callback,queue=queue,no_ack=True)
+        channel.basic_consume(self.callback, queue=queue, no_ack=True)
         print '[*] Waiting for queue messages'
 
         # start the consumer for the channel
@@ -61,16 +61,26 @@ class AmazonSQS(threading.Thread):
         results = sqs.receive_message(q, number_messages=1)
 
         print '[*] Waiting for Amazon SQS messages'
+        last_received = time.time()
 
         # loop and look for messages
         while True:
             # loop through the results
             for result in results:
-                # You could set a command to do certain things based upon the config
-                print str(result.get_body())
+                # Check to see the last time and the last message
 
-                # execute your command from the config
-                os.system(config.get('AWSSQS', 'command'))
+                offset = int(time.time() - last_received)
+                if offset > 60:
+                    # You could set a command to do certain things based upon the config
+                    if str(result.get_body()) == 'somvalue':
+                        #DO something
+                        print str(result.get_body())
+                    # execute your command from the config
+                    os.system(config.get('AWSSQS', 'command'))
+
+                last_received = time.time()
+
+
 
             # re-get the messages
             results = sqs.receive_message(q, number_messages=1)
